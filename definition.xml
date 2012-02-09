@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<game xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Call of Cthulhu" id="43054c18-2362-43e0-a434-72f8d0e8477c" octgnVersion="0.10.0.0" version="1.0.7" markersize="24">
+	<card back="r1" front="r2" width="63" height="88" cornerRadius="0">
+		<property name="Type" type="String" hidden="false" ignoreText="False" />
+		<property name="Descriptor" type="String" hidden="false" ignoreText="False" />
+		<property name="Cost" type="String" hidden="false" ignoreText="False" />
+		<property name="Faction" type="String" hidden="false" ignoreText="False" />
+		<property name="Icons" type="String" hidden="false" ignoreText="False" />
+		<property name="Skill" type="String" hidden="false" ignoreText="False" />
+		<property name="Subtypes" type="String" hidden="false" ignoreText="False" />
+		<property name="Card Text" type="String" hidden="false" ignoreText="False" />
+		<property name="Keyword" type="String" hidden="false" ignoreText="False" />
+		<property name="Resource Icon" type="String" hidden="false" ignoreText="False" />
+		<property name="Collector Info" type="Char" hidden="false" />
+		<property name="Struggle Icons" type="String" hidden="false" ignoreText="False" />
+	</card>
+	<table name="Table" visibility="undefined" ordered="false" width="640" height="480" board="r3" boardPosition="0,0,0,0" background="r4" backgroundStyle="uniformToFill">
+		<groupaction menu="Flip a Coin" default="false" shortcut="Ctrl+F" execute="flipCoin" />
+		<groupaction menu="Refresh all cards" default="false" shortcut="F5" execute="restoreAll" />
+		<cardaction menu="Exhaust/Ready" default="true" shortcut="F9" execute="exhaust" />
+		<cardaction menu="Turn (In)Sane" default="false" shortcut="Ctrl+I" execute="turnInsane" />
+		<cardaction menu="Add Wound" default="false" shortcut="Alt+W" execute="addWound" />
+		<cardaction menu="Remove Wound" default="false" shortcut="Alt+Shift+W" execute="subWound" />
+		<cardaction menu="Add Success" default="false" shortcut="Alt+S" execute="addSuccess" />
+		<cardaction menu="Remove Success" default="false" shortcut="Alt+Shift+S" execute="subSuccess" />
+		<groupaction menu="Create Starting Domains" default="false" shortcut="Ctrl+D" execute="createDomains" />
+		<groupactions menu="Next Phase">
+			<groupaction menu="Go to Refresh Phase" default="false" shortcut="Ctrl+Shift+Z" execute="goToRefreshPhase" />
+			<groupaction menu="Next Phase" default="false" shortcut="Ctrl+Z" execute="nextPhase" />
+		</groupactions>
+		<cardaction menu="Commit to Story" default="false" shortcut="Ctrl+C" execute="commit" />
+		<cardaction menu="Drain/Refresh Domain" default="false" shortcut="Ctrl+A" execute="drain" />
+	</table>
+	<player summary="{#Success Story 1} / {#Success Story 2} / {#Success Story 3} / {#Stories Won} / {#Hand}">
+		<hand name="Hand" visibility="me" ordered="false" width="63" height="88" icon="r10">
+			<groupaction menu="Random Discard" default="false" execute="randomDiscard" />
+			<groupaction menu="Mulligan" default="false" shortcut="Ctrl+M" execute="mulligan" />
+			<cardaction menu="Play as Resource" default="false" shortcut="Ctrl+Q" execute="playresource" />
+			<cardaction menu="Play Card" default="true" shortcut="Ctrl+W" execute="play" />
+		</hand>
+		<group name="Deck" visibility="none" ordered="false" width="63" height="88" icon="r11" collapsed="false">
+			<groupaction menu="Shuffle" default="false" shortcut="Ctrl+S" execute="shuffle" />
+			<groupaction menu="Draw" default="true" shortcut="Ctrl+D" execute="draw" />
+			<groupaction menu="Draw X" default="false" shortcut="Ctrl+Shift+D" execute="drawMany" />
+		</group>
+		<group name="Discard Pile" visibility="all" ordered="false" width="63" height="88" icon="r12" collapsed="false" />
+		<group name="Story Deck" visibility="none" ordered="false" width="63" height="88" icon="r13" collapsed="false">
+			<groupaction menu="Shuffle" default="false" shortcut="Ctrl+S" execute="shuffle" />
+		</group>
+		<counter name="Success Story 1" default="0" reset="false" icon="r6" />
+		<counter name="Success Story 2" default="0" reset="false" icon="r7" />
+		<counter name="Success Story 3" default="0" reset="false" icon="r8" />
+		<counter name="Stories won" default="0" reset="false" icon="r9" />
+	</player>
+	<deck>
+		<section name="Draw Deck" group="Deck" />
+		<section name="Story Deck" group="Story Deck" />
+	</deck>
+	<scripts>
+		<script src="r5" />
+	</scripts>
+</game>
