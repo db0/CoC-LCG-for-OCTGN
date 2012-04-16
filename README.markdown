@@ -9,6 +9,15 @@ Find more details about it [on the official page](http://www.fantasyflightgames.
 Changelog
 ---------
 
+### 1.0.9
+
+* Removed unused backgrounds to reduce the game def size
+* Fixed a few actions not working in OCTGN 3.0.1.0
+
+### 1.0.8
+
+* Fixed the game complaining about Char to String errors
+
 ### 1.0.7
 
 * Fixed bug where using the "drain" function on a drained domain would not refresh it. Renamed "Drain Domain" to "Drain/Refresh" Domain

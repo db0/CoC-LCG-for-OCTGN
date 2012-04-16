@@ -50,7 +50,7 @@ def createDomains(group, x = 0, y = 0):
 
 def exhaust(card, x = 0, y = 0):
     mute()
-    if card.type == 'Token' or card.markers[Resource] == 1: Return
+    if card.Type == 'Token' or card.markers[Resource] == 1: return
     card.orientation ^= Rot90
     if card.orientation & Rot90 == Rot90:
         notify('{} exhausts {}'.format(me, card))
@@ -59,7 +59,7 @@ def exhaust(card, x = 0, y = 0):
 
 def commit(card, x = 0, y = 0):
     mute()
-    if card.type == 'Token' or card.markers[Resource] == 1: Return
+    if card.Type == 'Token' or card.markers[Resource] == 1: return
     card.orientation ^= Rot90
     if card.orientation & Rot90 == Rot90:
         notify('{} commits {} to a story'.format(me, card))
@@ -71,7 +71,7 @@ def drain(card, x = 0, y = 0):
   # if card.highlight == "#008000":
   if card.name == "Drain Token":
     card.moveTo(me.piles['Discard Pile'])
-    notify('{} refreshes {}'.format(me, card))
+    notify('{} refreshes Domain'.format(me))
   else:
     if card.name == "Domain":
         xp, yp = card.position
@@ -90,7 +90,7 @@ def turnInsane(card, x = 0, y = 0):
 
 def restore(card, x = 0, y = 0): 
     mute()
-    if card.type != 'Token' and card.type != 'Story' and card.markers[Resource] == 0: 
+    if card.Type != 'Token' and card.Type != 'Story' and card.markers[Resource] == 0: 
         card.orientation = Rot0
     if card.name == "Drain Token": card.moveTo(me.piles['Discard Pile'])
     card.highlight = None
@@ -150,6 +150,7 @@ def playresource(card, x = 0, y = 0):
     if me.hasInvertedTable() == True: card.moveToTable(0, -90)
     else: card.moveToTable(0, 90)
     card.orientation ^= Rot180
+    card.sendToBack()	
     card.markers[Resource] = 1
     notify("{} brings in a {} resource from his hand.".format(me, card.Faction))
 
