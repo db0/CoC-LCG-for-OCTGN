@@ -2,8 +2,7 @@
 <Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
   <Relationship Target="/card/back.jpg" Id="r1" Type="http://schemas.octgn.org/picture" />
   <Relationship Target="/card/front.jpg" Id="r2" Type="http://schemas.octgn.org/picture" />
-  <Relationship Target="/table/Simulated_Wood.jpg" Id="r3" Type="http://schemas.octgn.org/picture" />
-  <Relationship Target="/table/Simulated_Wood1.jpg" Id="r4" Type="http://schemas.octgn.org/picture" />
+  <Relationship Target="/table/Simulated_Wood.jpg" Id="r4" Type="http://schemas.octgn.org/picture" />
   <Relationship Target="/scripts/scripts1.py" Id="r5" Type="http://schemas.octgn.org/script" />
   <Relationship Target="/counters/story1.png" Id="r6" Type="http://schemas.octgn.org/picture" />
   <Relationship Target="/counters/story2.png" Id="r7" Type="http://schemas.octgn.org/picture" />

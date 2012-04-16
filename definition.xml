@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<game xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Call of Cthulhu" id="43054c18-2362-43e0-a434-72f8d0e8477c" octgnVersion="0.10.0.0" version="1.0.7" markersize="24">
+<game xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Call of Cthulhu" id="43054c18-2362-43e0-a434-72f8d0e8477c" octgnVersion="0.10.0.0" version="1.0.8" markersize="24">
 	<card back="r1" front="r2" width="63" height="88" cornerRadius="0">
 		<property name="Type" type="String" hidden="false" ignoreText="False" />
 		<property name="Descriptor" type="String" hidden="false" ignoreText="False" />
@@ -11,7 +11,7 @@
 		<property name="Card Text" type="String" hidden="false" ignoreText="False" />
 		<property name="Keyword" type="String" hidden="false" ignoreText="False" />
 		<property name="Resource Icon" type="String" hidden="false" ignoreText="False" />
-		<property name="Collector Info" type="Char" hidden="false" />
+		<property name="Collector Info" type="String" hidden="false" />
 		<property name="Struggle Icons" type="String" hidden="false" ignoreText="False" />
 	</card>
 	<table name="Table" visibility="undefined" ordered="false" width="640" height="480" board="r3" boardPosition="0,0,0,0" background="r4" backgroundStyle="uniformToFill">
